@@ -1,27 +1,27 @@
-import Image from 'next/image'
+import Image from "next/image";
 
 const links = [
   {
-    title: 'Discord',
-    href: 'https://discord.gg/Sugbu3t9zd',
-    description: 'Join our Discord server to play with other player!',
+    title: "Discord",
+    href: "https://discord.gg/Sugbu3t9zd",
+    description: "Join our Discord server to play with other player!",
   },
   {
-    title: 'Server',
-    href: 'https://mc.young-tw.com',
-    description: 'Copy the link mc.young-tw.com to join our server!',
+    title: "Server",
+    href: "https://mc.young-tw.com",
+    description: "Copy the link mc.young-tw.com to join our server!",
   },
   {
-    title: 'Contact',
-    href: 'https://link.young-tw.com',
-    description: 'Contact us if you have any question!',
+    title: "Contact",
+    href: "https://link.young-tw.com",
+    description: "Contact us if you have any question!",
   },
   {
-    title: 'Donate',
-    href: 'https://donate.young-tw.com',
-    description: 'Donate to support our server!',
+    title: "Donate",
+    href: "https://donate.young-tw.com",
+    description: "Donate to support our server!",
   },
-]
+];
 
 export default function Home() {
   return (
@@ -37,13 +37,12 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            By Young 2023
+            By Young 2025
           </a>
         </div>
       </div>
 
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-
         {links.map((p) => {
           return (
             <a
@@ -54,7 +53,7 @@ export default function Home() {
               key={p.title}
             >
               <h2 className={`mb-3 text-2xl font-semibold`}>
-                {p.title}{' '}
+                {p.title}{" "}
                 <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
                   -&gt;
                 </span>
@@ -67,5 +66,5 @@ export default function Home() {
         })}
       </div>
     </main>
-  )
+  );
 }
