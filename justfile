@@ -8,25 +8,16 @@ install:
 build: install
     pnpm build
 
-deploy: build docker-build docker-run
-
-start:
+start: install
     pnpm start
 
-# Launch the development server
-# usage: just dev
-
-dev:
+dev: install
     pnpm dev
-
-# Build the Docker image
-# usage: just docker-build
 
 docker-build:
     docker build -t {{image_name}} .
 
-# Run the Docker container
-# usage: just docker-run
-
 docker-run:
     docker run -p 3000:3000 {{image_name}}
+
+deploy: build docker-build docker-run
