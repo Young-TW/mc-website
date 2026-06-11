@@ -1,5 +1,4 @@
 allowBuilds:
-  sharp: set this to true or false
-onlyBuiltDependencies:
-  - sharp
+  sharp: true
+  unrs-resolver: true
 strictDepBuilds: false
