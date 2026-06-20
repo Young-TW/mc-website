@@ -1,8 +1,12 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import localFont from 'next/font/local'
 
-const inter = Inter({ subsets: ['latin'] })
+// Self-hosted Inter so the production build is hermetic (no Google Fonts fetch).
+const inter = localFont({
+  src: './fonts/inter-latin-wght-normal.woff2',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Minecraft Server',
